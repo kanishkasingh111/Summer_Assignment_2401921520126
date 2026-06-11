@@ -1,3 +1,8 @@
+#include<iostream>
+#include<vector>
+#include<string>
+using namespace std;
+
 class Solution {
 public:
 
@@ -55,3 +60,20 @@ public:
         return -1;
     }
 };
+
+int main()
+{
+    string haystack,needle;
+
+    cout<<"Enter haystack: ";
+    cin>>haystack;
+
+    cout<<"Enter needle: ";
+    cin>>needle;
+
+    Solution obj;
+    int ans=obj.strStr(haystack,needle);
+    cout<<"Index = "<<ans<<endl;
+
+    return 0;
+}
