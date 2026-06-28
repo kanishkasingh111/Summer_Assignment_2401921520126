@@ -17,7 +17,6 @@ class TreeNode{
 
 class Solution {
 public:
-
     unordered_map<int, int> in;
     int idx=0;
     TreeNode* solve(vector<int>& preorder,int low,int high)
@@ -30,7 +29,6 @@ public:
         root->right=solve(preorder,pos+1,high);
         return root;
     }
-
     TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
         for(int i=0;i<inorder.size();i++)
         in[inorder[i]]=i;
@@ -42,7 +40,6 @@ int main()
 {
     vector<int>preorder={3,9,20,15,7};
     vector<int>inorder={9,3,15,20,7};
-
     Solution obj;
     TreeNode *root=obj.buildTree(preorder,inorder);
 
